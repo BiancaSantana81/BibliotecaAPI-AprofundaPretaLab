@@ -1,4 +1,3 @@
-import { Book } from '../../src/core/entities/Book';
 import { InMemoryBookRepository } from '../../src/infra/database/inMemoryUserRepository';
 import { CreateBook } from '../../src/core/usecases/CreateBook';
 import { DeleteBook } from '../../src/core/usecases/DeleteBook';
