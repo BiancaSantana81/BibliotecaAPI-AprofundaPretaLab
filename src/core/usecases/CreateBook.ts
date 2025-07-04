@@ -8,7 +8,6 @@ export interface ICreateBook {
     publishedYear: number;
 }
 
-
 export class CreateBook {
     constructor(private bookRepository: BookRepository) {}
 
