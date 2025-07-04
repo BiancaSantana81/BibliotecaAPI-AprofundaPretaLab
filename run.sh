@@ -24,6 +24,11 @@ function start_server() {
 
 if [ "$1" == "clean" ]; then
   clean
+
+elif [ "$1" == "test" ]; then
+  setup
+  test
+
 else
   echo "Iniciando projeto..."
   setup
