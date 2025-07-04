@@ -31,8 +31,8 @@ describe('CreateBook usecase - unit test', () => {
     it("deve lançar um erro se o título do livro não for fornecido", async () => {
         const newBook = {
             title: '',
-            author: 'Elena Ferrante',
-            publishedYear: 2011,
+            author: 'Gení Guimarães',
+            publishedYear: 1992,
             isBorrowed: false,
         };
 

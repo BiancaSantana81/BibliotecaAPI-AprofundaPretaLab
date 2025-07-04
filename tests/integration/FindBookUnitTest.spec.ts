@@ -16,11 +16,11 @@ describe('FindBook usecase - unit test', () => {
 
     it("deve encontrar um livro pelo ID", async () => {
         const newBook = {
-            title: 'Grande Sertão: Veredas',
-            author: 'João Guimarães Rosa',
-            publishedYear: 1956,
+            title: 'O Segredo das Águas',
+            author: 'Gení Guimarães',
+            publishedYear: 2001,
             isBorrowed: false,
-        }
+        };
 
         const createdBook = await createBook.execute(newBook);
         const foundBook = await findBookById.execute(createdBook.id);
