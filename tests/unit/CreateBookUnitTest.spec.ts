@@ -14,9 +14,9 @@ describe('CreateBook usecase - unit test', () => {
 
     it("deve criar um livro com sucesso", async () => {
         const newBook = {
-            title: 'A Amiga Genial',
-            author: 'Elena Ferrante',
-            publishedYear: 2011,
+            title: 'Leito do Peito',
+            author: 'Gení Guimarães',
+            publishedYear: 1992,
             isBorrowed: false,
         };
 
