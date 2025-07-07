@@ -10,8 +10,6 @@ export class UpdateBorrowStatus{
         if (!statusBook) throw new Error('Book not found');
         statusBook.isBorrowed = !statusBook.isBorrowed;
 
-        console.log("status do livro: ", statusBook.isBorrowed);
-
         await this.bookRepository.updateBook(statusBook);
     }
 }
