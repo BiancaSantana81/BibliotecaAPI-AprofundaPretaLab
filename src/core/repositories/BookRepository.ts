@@ -8,5 +8,4 @@ export interface BookRepository {
     findAll(): Promise<Book[]>;
     deleteById(id: string): Promise<void>;
     updateBook(book: Book): Promise<void>;
-    updateBorrowStatus(id: string, isBorrowed: boolean): Promise<void>;
 }

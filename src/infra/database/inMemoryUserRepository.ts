@@ -26,8 +26,11 @@ export class InMemoryBookRepository implements BookRepository {
         if (index !== -1) this.books[index] = book;
     }
 
-    async updateBorrowStatus(id: string, isBorrowed: boolean): Promise<void> {
-        const book = await this.findById(id);
-        if (book) book.isBorrowed = isBorrowed;
-    }
+    // async updateBorrowStatus(id: string): Promise<void> {
+    //     const book = await this.findById(id);
+    //     if (!book) throw new Error('Book not found');
+
+    //     book.isBorrowed = !book.isBorrowed;
+    //     await this.updateBook(book);
+    // }
 }
