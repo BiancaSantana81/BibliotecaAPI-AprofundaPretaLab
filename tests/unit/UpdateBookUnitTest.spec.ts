@@ -3,6 +3,7 @@ import { InMemoryBookRepository } from '../../src/infra/database/inMemoryUserRep
 import { CreateBook } from '../../src/core/usecases/CreateBook';
 import { UpdateBook } from '../../src/core/usecases/UpdateBook';
 import e from 'express';
+import { create } from 'domain';
 
 describe('CreateBook usecase - unit test', () => {
 
@@ -25,7 +26,7 @@ describe('CreateBook usecase - unit test', () => {
         };
 
         const createdBook = await createBook.execute(newBook);
-        await updateBook.execute({
+        await updateBook.execute(createdBook.id, {
             id : createdBook.id,
             title: 'Casa de Alvenaria: Diário de uma Ex-Favelada',
             author: 'Carolina Maria de Jesus',
