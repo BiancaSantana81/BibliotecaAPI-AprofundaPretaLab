@@ -1,7 +1,6 @@
 import request from 'supertest';
 
 import app from '../../src/infra/server/server';
-import { create } from 'domain';
 
 describe('DELETE / books', () => {
 
@@ -18,11 +17,7 @@ describe('DELETE / books', () => {
     });
 
     it('deve deletar um livro da lista', async () => {
-        const response = await request(app).delete(`/api/library/delete-book/${createdBookId}`).send({
-            title: 'Não Sou Eu Mulher? Mulheres Negras e Feminismo',
-            author: 'bell hooks',
-            publishedYear: 1981
-        });
+        const response = await request(app).delete(`/api/library/delete-book/${createdBookId}`);
 
         expect(response.status).toBe(204);
     });
