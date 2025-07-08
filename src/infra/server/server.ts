@@ -1,5 +1,5 @@
 import express from 'express';
-import { libraryRoutes} from '../../app/routes/controllers/libraryRoutes';
+import { libraryRoutes} from '../../app/controllers/routes/libraryRoutes';
 
 const app = express();
 app.use(express.json());
