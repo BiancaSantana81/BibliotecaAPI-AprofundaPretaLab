@@ -4,7 +4,7 @@ import { BookRepository } from '../repositories/BookRepository';
 export class UpdateBook {
     constructor(private bookRepository: BookRepository) {}
 
-    async execute(id: string, book: Book): Promise<void> {
+    async execute(id: string, book: Book): Promise<Book> {
         const foundBook = await this.bookRepository.findById(id);
         if (!foundBook) throw new Error('Book not found');
 
@@ -12,6 +12,7 @@ export class UpdateBook {
         foundBook.author = book.author;
         foundBook.publishedYear = book.publishedYear;
 
-        await this.bookRepository.updateBook(foundBook);
+        const updated = await this.bookRepository.updateBook(foundBook);
+        return updated;
     }
 }

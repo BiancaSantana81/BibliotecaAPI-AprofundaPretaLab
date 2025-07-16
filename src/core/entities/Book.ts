@@ -1,9 +1,8 @@
 export class Book {
-    public readonly id: string;
     public isBorrowed: boolean;
 
     constructor(
-        id: string,
+        public id: string,
         public title: string,
         public author: string,
         public publishedYear: number,
