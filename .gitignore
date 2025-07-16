@@ -4,4 +4,6 @@ package-lock.json
 
 # build output
 dist/
+coverage/
 .env
+
