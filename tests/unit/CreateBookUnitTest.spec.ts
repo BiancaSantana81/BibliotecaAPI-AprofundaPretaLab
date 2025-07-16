@@ -1,5 +1,5 @@
 import { Book } from '../../src/core/entities/Book';
-import { InMemoryBookRepository } from '../../src/infra/database/inMemoryUserRepository';
+import { InMemoryBookRepository } from '../../src/infra/database/InMemoryBookRepository';
 import { CreateBook } from '../../src/core/usecases/CreateBook';
 
 describe('CreateBook usecase - unit test', () => {

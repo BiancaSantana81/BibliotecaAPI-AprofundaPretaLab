@@ -1,3 +1,4 @@
-import {MongoBookRepository} from './MongoBookRepository';
+// src/infra/database/repositoryInstance.ts
+import { getBookRepository } from './repositoryFactory';
 
-export const bookRepository = new MongoBookRepository();
+export const bookRepository = getBookRepository();

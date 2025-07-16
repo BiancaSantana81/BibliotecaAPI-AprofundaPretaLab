@@ -1,4 +1,4 @@
-import { InMemoryBookRepository } from '../../src/infra/database/inMemoryUserRepository';
+import { InMemoryBookRepository } from '../../src/infra/database/InMemoryBookRepository';
 import { CreateBook } from '../../src/core/usecases/CreateBook';
 import { DeleteBook } from '../../src/core/usecases/DeleteBook';
 

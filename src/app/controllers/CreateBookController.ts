@@ -10,7 +10,14 @@ export class CreateBookController {
             const createBook = new CreateBook(bookRepository);
             const book = await createBook.execute({ title, author, publishedYear });
 
-            return res.status(201).json(book);
+            return res.status(201).json({
+                id: book.id,
+                title: book.title,
+                author: book.author,
+                publishedYear: book.publishedYear,
+                isBorrowed: book.isBorrowed
+
+            });
         } catch (error) {
             return res.status(400).json({ error: error });
         }
