@@ -12,7 +12,6 @@ Este projeto foi desenvolvido como parte do curso **Aprofunda PretaLab**, com o 
 
 A aplicação permite criar, consultar, atualizar e deletar livros, além de gerenciar seu status de empréstimo.
 
-
 ---
 
 ## 🧩 Integração com Banco de Dados
