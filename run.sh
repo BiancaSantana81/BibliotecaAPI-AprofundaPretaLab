@@ -4,6 +4,7 @@ function clean() {
   echo "Limpando executáveis e node_modules..."
   find . -type f -executable -exec rm -v {} \;
   find . -type d -name "node_modules" -exec rm -rfv {} \;
+  find . -type d -name "coverage" -exec rm -rfv {} \;
   echo "Limpeza concluída!"
 }
 
