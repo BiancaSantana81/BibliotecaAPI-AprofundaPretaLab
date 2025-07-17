@@ -1,7 +1,7 @@
 # Projeto Biblioteca – Aprofunda PretaLab
 
 <p align="center">
-  <img src="./black-girl" alt="black-girl-library" width="400" />
+  <img src="./black-girl-library" alt="black-girl-library" width="400" />
 </p>
 
 
