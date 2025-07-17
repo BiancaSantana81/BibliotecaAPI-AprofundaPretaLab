@@ -5,8 +5,37 @@
 </p>
 
 
+🔐 Em breve: autenticação de usuários com JWT e criação de UserSchema para controle de acesso às funcionalidades da aplicação.
 
-Este projeto foi desenvolvido como parte do curso **Aprofunda PretaLab**, com o objetivo de construir uma API REST para gerenciamento de livros, aplicando boas práticas de desenvolvimento como **arquitetura limpa** e **TDD (Test-Driven Development)**.
+
+Este projeto foi desenvolvido como parte do curso **Aprofunda PretaLab**, com o objetivo de construir uma API REST para gerenciamento de livros, aplicando boas práticas de desenvolvimento como **arquitetura limpa** e **TDD (Test-Driven Development)** e integração com banco de dados MongoDB.
+
+A aplicação permite criar, consultar, atualizar e deletar livros, além de gerenciar seu status de empréstimo.
+
+---
+
+## 🧩 Integração com Banco de Dados
+
+A aplicação utiliza o MongoDB como banco de dados principal, acessado por meio de um repositório específico dentro da arquitetura limpa. Isso permite fácil substituição ou troca por outro tipo de banco, se necessário.
+
+    🔁 Durante a execução normal da aplicação (em modo desenvolvimento ou produção), os dados são persistidos no MongoDB.
+
+---
+
+## Modelagem de Dados
+
+### 📚 Schema Book
+
+Os dados dos livros são modelados utilizando Mongoose Schemas. Cada livro possui os seguintes atributos:
+
+```
+- id: Identificador único do livro (gerado pelo MongoDB);
+- title: Título do livro
+- author: Nome do autor
+- publishedYear: Ano de publicação
+- isBorrowed: Indica se o livro está emprestado (true ou false)
+
+```
 
 ---
 
@@ -18,6 +47,9 @@ Inclui:
 
 - ✅ **Testes Unitários** – Validam regras de negócio de forma isolada.
 - ✅ **Testes de Integração** – Validam os fluxos completos da aplicação (controller → use case → repositório).
+
+    🧠 Durante os testes, o repositório utilizado é in-memory, ou seja, os dados não são persistidos no banco de dados real.
+
 
 Os testes foram escritos utilizando **Jest** e **Supertest**.
 
@@ -41,6 +73,7 @@ Os testes foram escritos utilizando **Jest** e **Supertest**.
 - Node.js
 - TypeScript
 - Express
+- MongoDB (com Mongoose e Schemas para modelagem de dados)
 - Jest
 - Supertest
 - Arquitetura Limpa (Clean Architecture)

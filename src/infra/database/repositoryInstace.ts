@@ -1,3 +1,4 @@
-import {InMemoryBookRepository} from './inMemoryUserRepository';
+// src/infra/database/repositoryInstance.ts
+import { getBookRepository } from './repositoryFactory';
 
-export const bookRepository = new InMemoryBookRepository();
+export const bookRepository = getBookRepository();

@@ -7,6 +7,6 @@
     "esModuleInterop": true,
     "strict": true
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests", "src/infra/database/mongooseConnection.ts"],
   "exclude": ["node_modules"]
 }

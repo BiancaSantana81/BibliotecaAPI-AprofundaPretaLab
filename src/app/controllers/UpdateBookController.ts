@@ -9,9 +9,9 @@ export class UpdateBookController {
 
         try {
             const updateBook = new UpdateBook(bookRepository);
-            await updateBook.execute(id, book);
+            const updatedBook = await updateBook.execute(id, book);
 
-            return res.status(204).send();
+            return res.status(200).json(updatedBook);
         } catch (error) {
             return res.status(400).json({error});
         }

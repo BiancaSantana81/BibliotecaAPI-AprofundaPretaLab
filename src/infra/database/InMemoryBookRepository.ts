@@ -6,7 +6,10 @@ import { BookRepository } from '../../core/repositories/BookRepository';
 export class InMemoryBookRepository implements BookRepository {
     public books: Book[] = [];
 
-    async save(book: Book): Promise<void> { this.books.push(book); }
+    async save(book: Book): Promise<Book> {
+        this.books.push(book);
+        return book;
+    }
 
     async findById(id: string): Promise<Book | null> {
         const book = this.books.find(b => b.id === id);
@@ -21,8 +24,12 @@ export class InMemoryBookRepository implements BookRepository {
         this.books = this.books.filter(b => b.id !== id);
     }
 
-    async updateBook(book: Book): Promise<void> {
+    async updateBook(book: Book): Promise<Book> {
         const index = this.books.findIndex(b => b.id === book.id);
-        if (index !== -1) this.books[index] = book;
+        if (index !== -1) {
+            this.books[index] = book;
+            return book;
+        }
+        throw new Error('Book not found');
     }
 }

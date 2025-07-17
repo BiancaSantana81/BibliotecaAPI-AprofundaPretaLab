@@ -23,7 +23,7 @@ describe('UPDATE / books', () => {
             publishedYear: 2000,
         });
 
-        expect(response.status).toBe(204);
+        expect(response.status).toBe(200);
         const getResponse = await request(app).get(`/api/library/book/${createdBookId}`);
         expect(getResponse.body.title).toBe('Tudo Sobre Amor: Novas Perspectivas');
     });
